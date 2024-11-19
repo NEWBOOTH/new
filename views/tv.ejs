@@ -1,0 +1,21 @@
+<%-include ('partials/header') -%>
+    <h1>TV Shows</h1>
+
+    
+    
+        <% series.forEach((serie, index) => { %>
+            <div class="container card m-2">
+                <div class="row mt-4">
+                    
+                    <div class="card col-lg-3 col-4 col-sm-2 m-2">
+                        <img src="<%= serie.background %>">
+                    </div>
+                    <span class="card col-7 col-sm-"><h5 class="card-title mt-3"><%= serie.title %></h5>overview <%= serie.overview %> <br><p class="card col-3 p- mt-5">TV SHOW</p></span>
+                    
+                </div>
+                
+            </div>
+        <% }); %>
+   
+
+

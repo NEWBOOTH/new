@@ -1,0 +1,57 @@
+
+  
+
+<%-include ('partials/header') -%>
+
+
+ 
+
+
+  
+  <div class="container mt-5">
+    <h1>Media List</h1>
+    <div class="row">
+      <% combinedData.forEach((item) => { %>
+        <div class="col-4 col-lg-2 mb-">
+          <a href="<%= item.mediaType === 'movie' ? `/movie/${item.id}` : `/series/${item.id}` %>" >
+            <div class="card">
+              <img class="card-img-top" src="<%= item.background %>" alt="<%= item.title %> Poster">
+              <div class="card-body">
+                <h5 class="card-title"><%= item.title %></h5>
+              </div>
+            </div>
+          </a>
+        </div>
+      <% }); %>
+    </div>
+</div>
+
+
+
+
+      
+      <nav aria-label="Page navigation example justify-content-space-between">
+        <ul class="pagination ">
+          <% if (currentPage > 1) { %>
+            <li class="page-item justify-content-start m-5"><a class="page-link" href="/?page=<%= currentPage - 1 %>">&leftarrow;Previous</a></li>
+          <% } %>
+          <% if (currentPage < totalPages) { %>
+            <li class="page-item justify-content-end m-5"><a class="page-link" href="/?page=<%= currentPage + 1 %>">NEXT&rightarrow;</a></li>
+          <% } %>
+        </ul>
+      </nav>
+  
+    </div>
+  </div>
+  
+  
+  
+
+
+ 
+
+
+
+</div>
+</body>
+</html>

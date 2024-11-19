@@ -1,0 +1,23 @@
+
+<%-include ('partials/header') -%>
+
+  
+
+  <h1><%= series.title %></h1>
+  <% if (series.background) { %>
+    <img src="<%= series.background %>" alt="<%= series.title %> Poster" class="img-fluid mb-3">
+  <% } %>
+  
+  <% if (episode) { %>
+    <h1>Season <%= season.season %> - Episode <%= episode.episode %>: <%= episode.title %></h1>
+    <% if (episode.file) { %>
+      <a href="/download/series/<%= series.id %>/<%= season.season %>/<%= episode.episode %>" class="btn btn-primary">Download</a>
+    <% } else { %>
+      <p>Download not available.</p>
+    <% } %>
+    <p><h4>OVERVIEW</h4><%= episode.overview %></p>
+  <% } else { %>
+    <p>Select a season and episode to download.</p>
+  <% } %>
+  
+  
