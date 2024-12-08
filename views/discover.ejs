@@ -1,0 +1,25 @@
+
+<%-include ('partials/header') -%>
+
+
+    <div class="container">
+        <% discover.forEach(discovery => { %>
+        <div class="card p-2">
+            <div class="col-md-3"><img src="<%= discovery.background %>"></div>
+            <% if(discovery.title) { %>
+                <h3><%= discovery.title %></h3>
+          <%  } %>
+          <p><%= discovery.overview %>
+             <br><%= discovery.release %></p>
+        
+             <%  genres.forEach(genre => { %>
+                <%= genre.name %></p>
+              <% }); %>
+                     
+                
+               
+            
+        </div>
+        <% }) %>
+    </div>
+   

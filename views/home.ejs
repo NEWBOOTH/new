@@ -8,14 +8,14 @@
 
 
   
-  <div class="container mt-5">
+  <div class="container mt-5 mb-5">
     <h1>Media List</h1>
     <div class="row">
       <% combinedData.forEach((item) => { %>
-        <div class="col-4 col-lg-2 mb-">
+        <div class="col-4 col-lg-2 m-2">
           <a href="<%= item.mediaType === 'movie' ? `/movie/${item.id}` : `/series/${item.id}` %>" >
-            <div class="card">
-              <img class="card-img-top" src="<%= item.background %>" alt="<%= item.title %> Poster">
+            <div class="car">
+              <img class="card-img-top" src="https://image.tmdb.org/t/p/w200/<%= item.background %>" alt="<%= item.title %> Poster">
               <div class="card-body">
                 <h5 class="card-title"><%= item.title %></h5>
               </div>
@@ -27,20 +27,20 @@
 </div>
 
 
+<img src="https://image.tmdb.org/t/p/w200/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="">
 
+<img src="https://image.tmdb.org/t/p/w200/yx1pc9vS1EtQyUu2ocxeds1GM52.jpg">
 
-      
-      <nav aria-label="Page navigation example justify-content-space-between">
-        <ul class="pagination ">
-          <% if (currentPage > 1) { %>
-            <li class="page-item justify-content-start m-5"><a class="page-link" href="/?page=<%= currentPage - 1 %>">&leftarrow;Previous</a></li>
-          <% } %>
-          <% if (currentPage < totalPages) { %>
-            <li class="page-item justify-content-end m-5"><a class="page-link" href="/?page=<%= currentPage + 1 %>">NEXT&rightarrow;</a></li>
-          <% } %>
-        </ul>
-      </nav>
-  
+<nav aria-label="Page navigation example">
+  <ul class="pagination ">
+    <% if (currentPage > 1) { %>
+      <div class="page-item justify-content-start"><a class="page-link" href="/?page=<%= currentPage - 1 %>">&leftarrow;Previous</a></div>
+    <% } %>
+    <% if (currentPage < 1000) { %>
+      <div class="page-item ms-auto"><a class="page-link" href="/?page=<%= currentPage + 1 %>">NEXT&rightarrow;</a></div>
+    <% } %>
+  </ul>
+</nav>
     </div>
   </div>
   

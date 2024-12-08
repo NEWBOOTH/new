@@ -1,19 +1,16 @@
 <%-include ('partials/header') -%>
 
-<div class="container">
+<div class="containe">
     <h2 class="mb-4">Available Movies</h2>
     <div class="row">
       <% movieDatas.forEach(movie => { %>
         
-        <div class="col-md-4 col-sm-4">
-          <a href="/movie/<%= movie.id %>/<%= movie.movieSlug %>" class="">
+        <div class="col-md-2 col-sm-3">
+          <a href="/movie/<%= movie.id %>/" class="">
           <div class="card">
             <% if (movie.background) { %>
-              <img src="<%= movie.background %>" class="card-img-top" alt="<%= movie.title %> Poster">
+              <img src="https://image.tmdb.org/t/p/w200/<%= movie.background %>" class="card-img-top" alt="<%= movie.title %> Poster">
             <% } %>
-            
-              
-            
             <div class="card-body">
               <h5 class="card-title"><%= movie.title %></h5>
              </a>

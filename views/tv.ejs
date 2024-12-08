@@ -4,18 +4,25 @@
     
     
         <% series.forEach((serie, index) => { %>
-            <div class="container card m-2">
-                <div class="row mt-4">
-                    
-                    <div class="card col-lg-3 col-4 col-sm-2 m-2">
-                        <img src="<%= serie.background %>">
+            <div class="container card mb-">
+                <a href="series/<%= serie.id %>">
+                <div class="row mt-3">
+                    <div class="col-lg-2 col-md-3 col-sm-4 car me-1">
+                        <img src="<%= https://image.tmdb.org/t/p/w200/serie.background %>">
                     </div>
-                    <span class="card col-7 col-sm-"><h5 class="card-title mt-3"><%= serie.title %></h5>overview <%= serie.overview %> <br><p class="card col-3 p- mt-5">TV SHOW</p></span>
+                    <div class="car col-lg-8 col-md-6 col-sm-5 ms-4">
+                        <h4 class="card-title mt-2"><%= serie.title %></h4>
+                        <em>Genre</em><br>
+                        <em>Rating</em>
+                        <p class="one">overview: <span class="str"><%= serie.overview %></span><br></p>
+                        <p class="p- mt-3"> <i></i> TV SHOW</p></div>
                     
                 </div>
-                
+                </a>
             </div>
         <% }); %>
    
 
+<script>
 
+</script>
