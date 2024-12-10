@@ -51,6 +51,7 @@
 
 <%-include ('partials/header') -%>
 
+
 <div class="container mt-5 mb-5">
   <div class="row">
     <div class="col-md-8 col-sm-8">
@@ -60,7 +61,7 @@
         <img src="https://image.tmdb.org/t/p/w200/<%= series.background %>" alt="<%= series.title %> Poster" class="img-fluid" style="margin: 100px 0 0 50px;">
       <% } %>
     </div>
-      <p><%= series.first_release %></p>
+      <p><%= series.first%></p>
       <% if (series.overview) { %>
         <h4 class="mb-3">Overview:</h4>
         <p><%= series.overview %></p>
@@ -70,6 +71,7 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= series.trailer %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <% } %>
     </div>
+    
     <div class="">
       <h4>Seasons</h4>
       <ul class="nav na-pills" id="seasonTabs" role="tablist">

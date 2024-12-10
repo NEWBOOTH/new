@@ -5,10 +5,10 @@
     
         <% series.forEach((serie, index) => { %>
             <div class="container card mb-">
-                <a href="series/<%= serie.id %>">
+                <a href="/series/<%= serie.id %>">
                 <div class="row mt-3">
                     <div class="col-lg-2 col-md-3 col-sm-4 car me-1">
-                        <img src="<%= https://image.tmdb.org/t/p/w200/serie.background %>">
+                        <img src=" https://image.tmdb.org/t/p/w200/<%=serie.background %>">
                     </div>
                     <div class="car col-lg-8 col-md-6 col-sm-5 ms-4">
                         <h4 class="card-title mt-2"><%= serie.title %></h4>

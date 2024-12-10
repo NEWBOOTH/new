@@ -1,0 +1,2032 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineMania</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      font-size: 15px;
+      background: #0e0e0e; /* Dark background */
+      font-family: 'fira sans'; /* Specify font family */
+      margin: 0; /* Remove default body margins */
+      padding: 0;
+      overflow-y: auto !important;
+      position: relative;
+      min-height: 100vh; /* Ensure body fills viewport height */
+      padding-bottom: 3rem; /* Adjust padding as needed */
+    }
+    b {
+      font-family: sans-serif;
+      line-height: 10px;
+      font-size: 30px;
+  }
+    h5 {
+      font-size: 1rem;
+      color: #cdcdcd; /* Light gray text color */
+    }
+    a {
+      text-decoration: none;
+      color: #fb422c; /* Your accent color */
+    }
+    .not, h1 {
+      color: #fb422c; /* Your accent color */
+    }
+    .navbar {
+      background-color: #1a1a1a; /* Dark navbar background */
+    }
+    .navbar-brand, .nav-link {
+      color: #cdcdcd; /* Light gray text for navbar */
+    }
+    .form-control {
+      background-color: #282828; /* Slightly darker input background */
+      color: #cdcdcd; /* Light gray text for input */
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container m-2">
+    
+   <div>
+    <span><img src="https://i.ibb.co/tZXpsst/ad4fffca-a995-43d2-a6f6-c5152d7cb6cf.jpg" class="col-3"></span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+   
+   </div>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 me-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/tv">TV</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/movie">Movies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/k-movie">K-Movies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/k-series">K Series</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/discover">discover</a>
+        </li>
+      </ul>
+      
+      <form class="d-flex" role="search">
+        <input class="form-control  me-2" type="search" name="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+    </div>
+    
+  </div>
+</nav>
+
+
+
+
+
+<div class="containe mt-5 mb-5 ps-5 ms-auto">
+  <h1>Media List</h1>
+  <div class="row">
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/0">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//xbKFv4KF3sVYuWKllLlwWDmuZP7.jpg" alt="IF (2024) Poster">
+            <div class="card-body">
+              <p class="card-title">IF (2024)</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/1">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//oil3EZwKFp3CWxZnfGfGglesvm9.jpg" alt="Hit_Man Poster">
+            <div class="card-body">
+              <p class="card-title">Hit_Man</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/1">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/power21.jpg" alt="Power Book II: Ghost Poster">
+            <div class="card-body">
+              <p class="card-title">Power Book II: Ghost</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/3">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//cR0ursLXoT0zfX9XDGAzQRAnK0W.jpg" alt="Power Book IV: Force Poster">
+            <div class="card-body">
+              <p class="card-title">Power Book IV: Force</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/4">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//8yBQYa6AdvMY5H9CiAv0HkvF3UE.jpg" alt="Ghosts Poster">
+            <div class="card-body">
+              <p class="card-title">Ghosts</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/9">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/ricky.jpg" alt="ricky staniky Poster">
+            <div class="card-body">
+              <p class="card-title">ricky staniky</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/10">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/pd.jpg" alt="Chicago P.D Poster">
+            <div class="card-body">
+              <p class="card-title">Chicago P.D</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/11">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/cf.jpg" alt="Chicago Fire Poster">
+            <div class="card-body">
+              <p class="card-title">Chicago Fire</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/12">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/hood.jpg" alt="The Neighborhood Poster">
+            <div class="card-body">
+              <p class="card-title">The Neighborhood</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/13">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/med.jpg" alt="Chicago Med Poster">
+            <div class="card-body">
+              <p class="card-title">Chicago Med</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/15">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/chaos.jpg" alt="Jurassic World:Chaos Theory Poster">
+            <div class="card-body">
+              <p class="card-title">Jurassic World:Chaos Theory</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/15">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/chaos.jpg" alt="Jurassic World:Chaos Theory Poster">
+            <div class="card-body">
+              <p class="card-title">Jurassic World:Chaos Theory</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/16">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/vox.jpg" alt="The Legend of Vox Machina Poster">
+            <div class="card-body">
+              <p class="card-title">The Legend of Vox Machina</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/16">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/justice.jpg" alt="Chicago Justice Poster">
+            <div class="card-body">
+              <p class="card-title">Chicago Justice</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/18">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/blueSumurai.jpg" alt="Blue Eye Sumurai Poster">
+            <div class="card-body">
+              <p class="card-title">Blue Eye Sumurai</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/19">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/skull.jpg" alt="Skull Island Poster">
+            <div class="card-body">
+              <p class="card-title">Skull Island</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/20">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/shield.jpg" alt="AGENTS Of S.H.I.E.LD Poster">
+            <div class="card-body">
+              <p class="card-title">AGENTS Of S.H.I.E.LD</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/21">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/castle1.jpg" alt="Castlevania Poster">
+            <div class="card-body">
+              <p class="card-title">Castlevania</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/22">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/spd.jpg" alt="Power Ranger S.P.D Poster">
+            <div class="card-body">
+              <p class="card-title">Power Ranger S.P.D</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/23">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/lad.jpg" alt="Love Between Fairy and Devil Poster">
+            <div class="card-body">
+              <p class="card-title">Love Between Fairy and Devil</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/25">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//8TZbpPpLQVS2i7P7yUVhrFlFsmW.jpg" alt="The Untamed Poster">
+            <div class="card-body">
+              <p class="card-title">The Untamed</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/27">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/ours.jpg" alt="72 Hours Poster">
+            <div class="card-body">
+              <p class="card-title">72 Hours</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/27">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/agatha.jpg" alt="Agatha All Along Poster">
+            <div class="card-body">
+              <p class="card-title">Agatha All Along</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/28">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/ppro.jpg" alt="Power Project Poster">
+            <div class="card-body">
+              <p class="card-title">Power Project</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/28">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/dragon.jpg" alt="House Of The Dragon Poster">
+            <div class="card-body">
+              <p class="card-title">House Of The Dragon</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/29">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/pie.jpg" alt="American Pie Pressents: Girls' Rules Poster">
+            <div class="card-body">
+              <p class="card-title">American Pie Pressents: Girls' Rules</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/29">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/boon.jpg" alt="The Boondocks Poster">
+            <div class="card-body">
+              <p class="card-title">The Boondocks</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/30">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/spider202.jpg" alt="Spider Man 2002 Poster">
+            <div class="card-body">
+              <p class="card-title">Spider Man 2002</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/30">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//eXswCm8rvJUQbU89ihb0CQVJGpS.jpg" alt="All The Queens&quot;s Men Poster">
+            <div class="card-body">
+              <p class="card-title">All The Queens"s Men</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/31">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/crow.jpg" alt="  The Crow Poster">
+            <div class="card-body">
+              <p class="card-title">  The Crow</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/32">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/taipei.jpg" alt="Weekend In Taipei Poster">
+            <div class="card-body">
+              <p class="card-title">Weekend In Taipei</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/33">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/tough.jpg" alt="Madea Tough Love Poster">
+            <div class="card-body">
+              <p class="card-title">Madea Tough Love</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/34">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/tyrone.jpg" alt="They Clone Tyrone Poster">
+            <div class="card-body">
+              <p class="card-title">They Clone Tyrone</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/35">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/dayshift.jpg" alt="Day Shift Poster">
+            <div class="card-body">
+              <p class="card-title">Day Shift</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/36">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/war1.jpg" alt="Love of War(2005) Poster">
+            <div class="card-body">
+              <p class="card-title">Love of War(2005)</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/37">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/get.jpg" alt="Get Fast Poster">
+            <div class="card-body">
+              <p class="card-title">Get Fast</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/38">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/sonic1.jpg" alt="Sonic the Hedgehog 2 Poster">
+            <div class="card-body">
+              <p class="card-title">Sonic the Hedgehog 2</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/40">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/landman.jpg" alt="Landman Poster">
+            <div class="card-body">
+              <p class="card-title">Landman</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/41">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/ami.jpg" alt="A.M.I Poster">
+            <div class="card-body">
+              <p class="card-title">A.M.I</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/42">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/let.jpg" alt="Let Him Go Poster">
+            <div class="card-body">
+              <p class="card-title">Let Him Go</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/43">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/tower.jpg" alt="The Dark Tower Poster">
+            <div class="card-body">
+              <p class="card-title">The Dark Tower</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/44">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/assassin.jpg" alt="Assassin&quot;s Guild Poster">
+            <div class="card-body">
+              <p class="card-title">Assassin"s Guild</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/45">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/east.jpg" alt="Megalopolis Poster">
+            <div class="card-body">
+              <p class="card-title">Megalopolis</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/46">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/umjolo.jpg" alt="Umjolo: The Gone Girl Poster">
+            <div class="card-body">
+              <p class="card-title">Umjolo: The Gone Girl</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/47">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/east1.jpg" alt="Love Game in Eastern Poster">
+            <div class="card-body">
+              <p class="card-title">Love Game in Eastern</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/48">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/pj.jpg" alt="Miss PJ Poster">
+            <div class="card-body">
+              <p class="card-title">Miss PJ</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/49">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/anti.jpg" alt="Anti-Drug Operation Poster">
+            <div class="card-body">
+              <p class="card-title">Anti-Drug Operation</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/50">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/untamed.jpg" alt="Untamed Poster">
+            <div class="card-body">
+              <p class="card-title">Untamed</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/51">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/azreal.jpg" alt="Azreal Poster">
+            <div class="card-body">
+              <p class="card-title">Azreal</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/52">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/canary.jpg" alt="Canary Black Poster">
+            <div class="card-body">
+              <p class="card-title">Canary Black</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/54">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/dunkirk.jpg" alt="Dunkirk Poster">
+            <div class="card-body">
+              <p class="card-title">Dunkirk</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/55">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/devil.jpg" alt="The Devil Judge Poster">
+            <div class="card-body">
+              <p class="card-title">The Devil Judge</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/56">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/sher.jpg" alt="Sherlock Holmes Poster">
+            <div class="card-body">
+              <p class="card-title">Sherlock Holmes</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/57">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/moana2.jpg" alt="Moana 2 Poster">
+            <div class="card-body">
+              <p class="card-title">Moana 2</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/560">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//imges/power.jpg" alt="Power Poster">
+            <div class="card-body">
+              <p class="card-title">Power</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/620">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//7E8nLijS9AwwUEPu2oFYOVKhdFA.jpg" alt="Ghostbusters Poster">
+            <div class="card-body">
+              <p class="card-title">Ghostbusters</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/1771">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//vSNxAJTlD0r02V9sPYpOjqDZXUK.jpg" alt="Captain America: The First Avenger Poster">
+            <div class="card-body">
+              <p class="card-title">Captain America: The First Avenger</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/1858">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//1P7w3AImoEOWJX7nn3fdaKDfEQA.jpg" alt="Transformers Poster">
+            <div class="card-body">
+              <p class="card-title">Transformers</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/4011">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//nnl6OWkyPpuMm595hmAxNW3rZFn.jpg" alt="Beetlejuice Poster">
+            <div class="card-body">
+              <p class="card-title">Beetlejuice</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/9615">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//cm2ffqb3XovzA5ZSzyN3jnn8qv0.jpg" alt="The Fast and the Furious: Tokyo Drift Poster">
+            <div class="card-body">
+              <p class="card-title">The Fast and the Furious: Tokyo Drift</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/9659">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//5LrI4GiCSrChgkdskVZiwv643Kg.jpg" alt="Mad Max Poster">
+            <div class="card-body">
+              <p class="card-title">Mad Max</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/9799">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//gqY0ITBgT7A82poL9jv851qdnIb.jpg" alt="The Fast and the Furious Poster">
+            <div class="card-body">
+              <p class="card-title">The Fast and the Furious</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/10195">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//prSfAi1xGrhLQNxVSUFh61xQ4Qy.jpg" alt="Thor Poster">
+            <div class="card-body">
+              <p class="card-title">Thor</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/10611">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//yeV2H5dJmaR4XmNNG6q3ikV8a8y.jpg" alt="Barbershop Poster">
+            <div class="card-body">
+              <p class="card-title">Barbershop</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/11679">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//jFDsnFmlZaYyRL2uN8ZrMfZoeCe.jpg" alt="xXx: State of the Union Poster">
+            <div class="card-body">
+              <p class="card-title">xXx: State of the Union</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/13995">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//vdHrLFfHcJX9nlvUfG3LK2a2hq4.jpg" alt="Captain America Poster">
+            <div class="card-body">
+              <p class="card-title">Captain America</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/15576">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200/moana" alt="Kevin Hart Poster">
+            <div class="card-body">
+              <p class="card-title">Kevin Hart</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/15670">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//qiXNNmSFXsfUdKDkylBF2LfX0DR.jpg" alt="Madea Goes to Jail Poster">
+            <div class="card-body">
+              <p class="card-title">Madea Goes to Jail</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/16781">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//kDCCXEm902lfZB51sf6MWCpYqIb.jpg" alt="Madea's Family Reunion Poster">
+            <div class="card-body">
+              <p class="card-title">Madea's Family Reunion</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/20352">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//9lOloREsAhBu0pEtU0BgeR1rHyo.jpg" alt="Despicable Me Poster">
+            <div class="card-body">
+              <p class="card-title">Despicable Me</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/21301">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//n4sOe401udZJWJEOvKvSs3peZcB.jpg" alt="Barbershop 2: Back in Business Poster">
+            <div class="card-body">
+              <p class="card-title">Barbershop 2: Back in Business</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/25565">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//q61s5H2DRHSJYx75adOtTL3aFuY.jpg" alt="Transformers: Beginnings Poster">
+            <div class="card-body">
+              <p class="card-title">Transformers: Beginnings</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/28004">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//7VScbaiRhaISyaWxZuFBri6uKke.jpg" alt="Tyler Perry's Madea's Family Reunion - The Play Poster">
+            <div class="card-body">
+              <p class="card-title">Tyler Perry's Madea's Family Reunion - The Play</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/31668">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//oU5qvvUCj1DTCk2kKKTPQDIx7nd.jpg" alt="All the Queen's Men Poster">
+            <div class="card-body">
+              <p class="card-title">All the Queen's Men</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/37488">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//zYO2ychL6Sw0Ww9LMFUNdcjZVKg.jpg" alt="Hit Man Poster">
+            <div class="card-body">
+              <p class="card-title">Hit Man</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/50388">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//wH9SSbsNWKLtZjA4LBQ7P2GwbLZ.jpg" alt="King of Thorn Poster">
+            <div class="card-body">
+              <p class="card-title">King of Thorn</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/50410">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//vvYt1CDagCKMrolohME0o15GPZ3.jpg" alt="Spider-Man: The Venom Saga Poster">
+            <div class="card-body">
+              <p class="card-title">Spider-Man: The Venom Saga</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/51017">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//6qWcpqRfUEFrbKdDvB7tg7h1oXz.jpg" alt="Madea's Big Happy Family Poster">
+            <div class="card-body">
+              <p class="card-title">Madea's Big Happy Family</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/54559">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//yp6F4JqWeKMzd3N2fW10Ja3cBJK.jpg" alt="Orientation Day Poster">
+            <div class="card-body">
+              <p class="card-title">Orientation Day</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/70425">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//mHlKYGEFa0VwMBZdDP0y9meDI4g.jpg" alt="Hit Man Returns - David Foster &amp; Friends Poster">
+            <div class="card-body">
+              <p class="card-title">Hit Man Returns - David Foster &amp; Friends</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/76338">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//wp6OxE4poJ4G7c0U2ZIXasTSMR7.jpg" alt="Thor: The Dark World Poster">
+            <div class="card-body">
+              <p class="card-title">Thor: The Dark World</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/76341">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//hA2ple9q4qnwxp3hKVNhroipsir.jpg" alt="Mad Max: Fury Road Poster">
+            <div class="card-body">
+              <p class="card-title">Mad Max: Fury Road</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/91314">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//4ACxxNFsifxyZz8KQdd7zwQqTPW.jpg" alt="Transformers: Age of Extinction Poster">
+            <div class="card-body">
+              <p class="card-title">Transformers: Age of Extinction</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/93456">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//5Fh4NdoEnCjCK9wLjdJ9DJNFl2b.jpg" alt="Despicable Me 2 Poster">
+            <div class="card-body">
+              <p class="card-title">Despicable Me 2</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/100402">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//tVFRpFw3xTedgPGqxW0AOI8Qhh0.jpg" alt="Captain America: The Winter Soldier Poster">
+            <div class="card-body">
+              <p class="card-title">Captain America: The Winter Soldier</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/100883">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//hd5fnBixab6IzfUwjC5wfdbX3eM.jpg" alt="Never Have I Ever Poster">
+            <div class="card-body">
+              <p class="card-title">Never Have I Ever</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/102899">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//rQRnQfUl3kfp78nCWq8Ks04vnq1.jpg" alt="Ant-Man Poster">
+            <div class="card-body">
+              <p class="card-title">Ant-Man</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/103370">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//4P6d7kVDB60Ydmk9WAhrPCWrARI.jpg" alt="Madea's Witness Protection Poster">
+            <div class="card-body">
+              <p class="card-title">Madea's Witness Protection</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/105567">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//pHtJkK3G190wD4uTRVtOq1HClng.jpg" alt="The Union Poster">
+            <div class="card-body">
+              <p class="card-title">The Union</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/106355">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//b15xz96lSiH1JC7uYKofXJz0HTD.jpg" alt="Captain America Poster">
+            <div class="card-body">
+              <p class="card-title">Captain America</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/117830">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//mIvbfZFLJGwNvJKJcnYIppSbWdI.jpg" alt="Tomb Raider: The Legend of Lara Croft Poster">
+            <div class="card-body">
+              <p class="card-title">Tomb Raider: The Legend of Lara Croft</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/124394">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//cZwgcJMptOdlsOTWgkFaGfwZuVi.jpg" alt="Power Book III: Raising Kanan Poster">
+            <div class="card-body">
+              <p class="card-title">Power Book III: Raising Kanan</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/129600">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//x145FSI9xJ6UbkxfabUsY2SFbu3.jpg" alt=" Poster">
+            <div class="card-body">
+              <p class="card-title"></p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/135934">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//b5A0qkGrZJTyVv3gT6b8clFEz9R.jpg" alt="The Legend of Vox Machina Poster">
+            <div class="card-body">
+              <p class="card-title">The Legend of Vox Machina</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/150540">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//2H1TmgdfNtsKlU9jKdeNyYL5y8T.jpg" alt="Inside Out Poster">
+            <div class="card-body">
+              <p class="card-title">Inside Out</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/154084">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//lzZ9J2FOsaq1DCuD7k2f4ogbXdD.jpg" alt="Citadel Honey Bunny Poster">
+            <div class="card-body">
+              <p class="card-title">Citadel Honey Bunny</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/175555">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//yNZjU6q0mSvRTtc2ge1Jhj03URx.jpg" alt="A Madea Christmas Poster">
+            <div class="card-body">
+              <p class="card-title">A Madea Christmas</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/197467">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//gNGq4u0cymxZqGADZrx7AWrSB5m.jpg" alt="Captain America Poster">
+            <div class="card-body">
+              <p class="card-title">Captain America</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/197481">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//pocmh0P8Ddf5w33pP3Vuqm0JRP9.jpg" alt="Captain America II: Death Too Soon Poster">
+            <div class="card-body">
+              <p class="card-title">Captain America II: Death Too Soon</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/200753">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//egO6MZeQ3CKb8UMVZPYR7fENA6w.jpg" alt="Kite Man: Hell Yeah! Poster">
+            <div class="card-body">
+              <p class="card-title">Kite Man: Hell Yeah!</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/204973">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//xooRYiNbZtwNUdx0p60QvWxuxeD.jpg" alt="Venom Poster">
+            <div class="card-body">
+              <p class="card-title">Venom</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/211672">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//dr02BdCNAUPVU07aOodwPYv6HCf.jpg" alt="Minions Poster">
+            <div class="card-body">
+              <p class="card-title">Minions</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/221912">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//xufsYLmNdMvRCbE5MbAMhkv3UUD.jpg" alt="Raped by an Angel 4: The Rapist's Union Poster">
+            <div class="card-body">
+              <p class="card-title">Raped by an Angel 4: The Rapist's Union</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/241485">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//ucxvu9kRykTd23m1omktBJZG2Q1.jpg" alt="Fight Night: The Million Dollar Heist Poster">
+            <div class="card-body">
+              <p class="card-title">Fight Night: The Million Dollar Heist</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/243084">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//cvbYjugS8OPtgPu9J7A9VjKjnsA.jpg" alt="Love Game in Eastern Fantasy Poster">
+            <div class="card-body">
+              <p class="card-title">Love Game in Eastern Fantasy</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/251939">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//hQnhk8bOFHlFI7KZ12NT24yW8iw.jpg" alt="Poppa's House Poster">
+            <div class="card-body">
+              <p class="card-title">Poppa's House</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/252136">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//4ByjmnwzlaSM8ORxFsFaxwEP9Y6.jpg" alt="Lady Revenger Returns From the Fire Poster">
+            <div class="card-body">
+              <p class="card-title">Lady Revenger Returns From the Fire</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/271110">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//rAGiXaUfPzY7CDEyNKUofk3Kw2e.jpg" alt="Captain America: Civil War Poster">
+            <div class="card-body">
+              <p class="card-title">Captain America: Civil War</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/271639">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//4lqRnRAiMqH5B10YSKkm1y9uld.jpg" alt="The Last Beekeeper Poster">
+            <div class="card-body">
+              <p class="card-title">The Last Beekeeper</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/277445">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//yx1pc9vS1EtQyUu2ocxeds1GM52.jpg" alt="Power Book V: Origins Poster">
+            <div class="card-body">
+              <p class="card-title">Power Book V: Origins</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/284274">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//AcFFHZGkpLUs31bKf42z8UVLimS.jpg" alt="Iron Man &amp; Captain America: Heroes United Poster">
+            <div class="card-body">
+              <p class="card-title">Iron Man &amp; Captain America: Heroes United</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/286558">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//smQcYI4DiF15HKt9RRpLywoWhnK.jpg" alt="Despicable Me Presents: Minion Madness Poster">
+            <div class="card-body">
+              <p class="card-title">Despicable Me Presents: Minion Madness</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/293660">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//3E53WEZJqP6aM84D8CckXx4pIHw.jpg" alt="Deadpool Poster">
+            <div class="card-body">
+              <p class="card-title">Deadpool</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/316029">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//b9CeobiihCx1uG1tpw8hXmpi7nm.jpg" alt="The Greatest Showman Poster">
+            <div class="card-body">
+              <p class="card-title">The Greatest Showman</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/316068">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//xGLrN1vNrL3JONYOwvRDLwRQAjK.jpg" alt="Tyler Perry's Madea's Tough Love Poster">
+            <div class="card-body">
+              <p class="card-title">Tyler Perry's Madea's Tough Love</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/324852">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//6t3YWl7hrr88lCEFlGVqW5yV99R.jpg" alt="Despicable Me 3 Poster">
+            <div class="card-body">
+              <p class="card-title">Despicable Me 3</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/326396">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//AoFxkze5c3JBkWm9zuAvulto2kv.jpg" alt="Despicable Me 2: 3 Mini-Movie Collection Poster">
+            <div class="card-body">
+              <p class="card-title">Despicable Me 2: 3 Mini-Movie Collection</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/326423">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//9mwzidlGgWfr2hcMWUKM86lOqdo.jpg" alt="Barbershop: The Next Cut Poster">
+            <div class="card-body">
+              <p class="card-title">Barbershop: The Next Cut</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/335983">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg" alt="Venom Poster">
+            <div class="card-body">
+              <p class="card-title">Venom</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/335988">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//s5HQf2Gb3lIO2cRcFwNL9sn1o1o.jpg" alt="Transformers: The Last Knight Poster">
+            <div class="card-body">
+              <p class="card-title">Transformers: The Last Knight</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/357557">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200/" alt="Princess of Power: A Golden Books Video Poster">
+            <div class="card-body">
+              <p class="card-title">Princess of Power: A Golden Books Video</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/363088">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//cFQEO687n1K6umXbInzocxcnAQz.jpg" alt="Ant-Man and the Wasp Poster">
+            <div class="card-body">
+              <p class="card-title">Ant-Man and the Wasp</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/365177">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//3NPUQ6Ywayb5ES2IP1HWrDRt1Gc.jpg" alt="Borderlands Poster">
+            <div class="card-body">
+              <p class="card-title">Borderlands</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/380124">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//82TLEZv1rOJNgllfYD22NkivGDH.jpg" alt="Boo! A Madea Halloween Poster">
+            <div class="card-body">
+              <p class="card-title">Boo! A Madea Halloween</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/383498">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//to0spRl1CMDvyUbOnbb4fTk3VAd.jpg" alt="Deadpool 2 Poster">
+            <div class="card-body">
+              <p class="card-title">Deadpool 2</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/384018">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//qRyy2UmjC5ur9bDi3kpNNRCc5nc.jpg" alt="Fast &amp; Furious Presents: Hobbs &amp; Shaw Poster">
+            <div class="card-body">
+              <p class="card-title">Fast &amp; Furious Presents: Hobbs &amp; Shaw</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/385128">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//bOFaAXmWWXC3Rbv4u4uM9ZSzRXP.jpg" alt="F9 Poster">
+            <div class="card-body">
+              <p class="card-title">F9</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/385687">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//fiVW06jE7z9YnO4trhaMEdclSiC.jpg" alt="Fast X Poster">
+            <div class="card-body">
+              <p class="card-title">Fast X</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/411840">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//wdSX8enQ5uEvNLQ3yXTnAVGtrCy.jpg" alt="Surf's Up 2: WaveMania Poster">
+            <div class="card-body">
+              <p class="card-title">Surf's Up 2: WaveMania</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/448352">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//bJlf0AFAV36z9KRRP99y5GcaCap.jpg" alt="Captain America: Behind the Skull Poster">
+            <div class="card-body">
+              <p class="card-title">Captain America: Behind the Skull</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/459202">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//5nvP4etJ8ecQv8qZM08dK4BAzdK.jpg" alt="Boo 2! A Madea Halloween Poster">
+            <div class="card-body">
+              <p class="card-title">Boo 2! A Madea Halloween</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/464504">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//sFvOTUlZrIxCLdmz1fC16wK0lme.jpg" alt="A Madea Family Funeral Poster">
+            <div class="card-body">
+              <p class="card-title">A Madea Family Funeral</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/466420">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//dB6Krk806zeqd0YNp2ngQ9zXteH.jpg" alt="Killers of the Flower Moon Poster">
+            <div class="card-body">
+              <p class="card-title">Killers of the Flower Moon</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/507241">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//4bKlTeOUr5AKrLky8mwWvlQqyVd.jpg" alt="The Killer's Game Poster">
+            <div class="card-body">
+              <p class="card-title">The Killer's Game</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/519182">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//wWba3TaojhK7NdycRhoQpsG0FaH.jpg" alt="Despicable Me 4 Poster">
+            <div class="card-body">
+              <p class="card-title">Despicable Me 4</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/533535">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" alt="Deadpool &amp; Wolverine Poster">
+            <div class="card-body">
+              <p class="card-title">Deadpool &amp; Wolverine</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/558144">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//wlKU9yB0Q8nfPMakBcSBT0JGS7.jpg" alt="Deadpool: No Good Deed Poster">
+            <div class="card-body">
+              <p class="card-title">Deadpool: No Good Deed</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/580489">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//1MJNcPZy46hIy2CmSqOeru0yr5C.jpg" alt="Venom: Let There Be Carnage Poster">
+            <div class="card-body">
+              <p class="card-title">Venom: Let There Be Carnage</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/581600">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//fePczipv6ZzDO2uoww4vTAu2Sq3.jpg" alt="Spenser Confidential Poster">
+            <div class="card-body">
+              <p class="card-title">Spenser Confidential</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/series/632000">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//4o7oOzAzFi7wMf40HdqM6YtSzE4.jpg" alt="A Family Affair Poster">
+            <div class="card-body">
+              <p class="card-title">A Family Affair</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/640146">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//qnqGbB22YJ7dSs4o6M7exTpNxPz.jpg" alt="Ant-Man and the Wasp: Quantumania Poster">
+            <div class="card-body">
+              <p class="card-title">Ant-Man and the Wasp: Quantumania</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/664413">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//6KwrHucIE3CvNT7kTm2MAlZ4fYF.jpg" alt="365 Days Poster">
+            <div class="card-body">
+              <p class="card-title">365 Days</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/667538">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//gPbM0MK8CP8A174rmUwGsADNYKD.jpg" alt="Transformers: Rise of the Beasts Poster">
+            <div class="card-body">
+              <p class="card-title">Transformers: Rise of the Beasts</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/698687">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//qbkAqmmEIZfrCO8ZQAuIuVMlWoV.jpg" alt="Transformers One Poster">
+            <div class="card-body">
+              <p class="card-title">Transformers One</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/701964">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//d0MRcKZGqV0oWbgu4QSp3QktbsE.jpg" alt="The Beekeeper Poster">
+            <div class="card-body">
+              <p class="card-title">The Beekeeper</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/704239">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//d9CTnTHip1RbVi2OQbA2LJJQAGI.jpg" alt="The Union Poster">
+            <div class="card-body">
+              <p class="card-title">The Union</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/706108">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//22j6QZ7jJM3EZHmTp1jwv5TU1C6.jpg" alt="Borderlands Poster">
+            <div class="card-body">
+              <p class="card-title">Borderlands</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/710671">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//vs52YiDriGQV4zhwFCRHDAe81ju.jpg" alt="The Bear and the Beekeeper Poster">
+            <div class="card-body">
+              <p class="card-title">The Bear and the Beekeeper</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/755679">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//lD8V3DBban95Mxz4sjuA81Tw771.jpg" alt="Fast X: Part 2 Poster">
+            <div class="card-body">
+              <p class="card-title">Fast X: Part 2</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/755991">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//P7rgASUjBCmCjoAG0LR8V4Ln2O.jpg" alt="Jackpot Poster">
+            <div class="card-body">
+              <p class="card-title">Jackpot</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/786892">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//iADOJ8Zymht2JPMoy3R7xceZprc.jpg" alt="Furiosa: A Mad Max Saga Poster">
+            <div class="card-body">
+              <p class="card-title">Furiosa: A Mad Max Saga</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/800158">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//e7Jvsry47JJQruuezjU2X1Z6J77.jpg" alt="The Killer Poster">
+            <div class="card-body">
+              <p class="card-title">The Killer</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/822119">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//4YFyYcUPfrbpj6VpgWh7xoUnwLA.jpg" alt="Captain America: Brave New World Poster">
+            <div class="card-body">
+              <p class="card-title">Captain America: Brave New World</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/829557">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//7qU0SOVcQ8BTJLodcAlulUAG16C.jpg" alt="365 Days: This Day Poster">
+            <div class="card-body">
+              <p class="card-title">365 Days: This Day</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/829560">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//dlyzCeI8wojBsUWdkNdO5AXtmZq.jpg" alt="The Next 365 Days Poster">
+            <div class="card-body">
+              <p class="card-title">The Next 365 Days</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/845404">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//lOGPhJ5hrvcRFernsAfuwdiqwur.jpg" alt="Tyler Perry's A Madea Homecoming Poster">
+            <div class="card-body">
+              <p class="card-title">Tyler Perry's A Madea Homecoming</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/854756">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//fmOdj06VKjys8USU3PsiTy978u4.jpg" alt="The Beekeepers Poster">
+            <div class="card-body">
+              <p class="card-title">The Beekeepers</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/866398">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//A7EByudX0eOzlkQ2FIbogzyazm2.jpg" alt="The Beekeeper Poster">
+            <div class="card-body">
+              <p class="card-title">The Beekeeper</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/912649">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//aosm8NMQ3UyoBVpSxyimorCQykC.jpg" alt="Venom: The Last Dance Poster">
+            <div class="card-body">
+              <p class="card-title">Venom: The Last Dance</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/917814">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//2HIM4dloOFqIM8NqpYHR6iJf0u1.jpg" alt="Top Gear: Fast and Furious Poster">
+            <div class="card-body">
+              <p class="card-title">Top Gear: Fast and Furious</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/957453">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//lBVOg6aOTO0AjJ9VdfdsHYhBVj6.jpg" alt="Top Gear: Fast and Furious 2 Poster">
+            <div class="card-body">
+              <p class="card-title">Top Gear: Fast and Furious 2</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/967847">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//e1J2oNzSBdou01sUvriVuoYp0pJ.jpg" alt="Ghostbusters: Frozen Empire Poster">
+            <div class="card-body">
+              <p class="card-title">Ghostbusters: Frozen Empire</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/970347">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//6PCnxKZZIVRanWb710pNpYVkCSw.jpg" alt="The Killer Poster">
+            <div class="card-body">
+              <p class="card-title">The Killer</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/980152">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//t3aEoDsRQ8UTaCbJizpHbSG9XL.jpg" alt="Medusa's Venom Poster">
+            <div class="card-body">
+              <p class="card-title">Medusa's Venom</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/987686">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//l0CaVyqnTsWwNd4hWsrLNEk1Wjd.jpg" alt="A Family Affair Poster">
+            <div class="card-body">
+              <p class="card-title">A Family Affair</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/1022789">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg" alt="Inside Out 2 Poster">
+            <div class="card-body">
+              <p class="card-title">Inside Out 2</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/1094138">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//fOsamTFIyGxjw1jLSKdZYxQBJOT.jpg" alt="Jackpot! Poster">
+            <div class="card-body">
+              <p class="card-title">Jackpot!</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/1102437">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//skZtt98A1rNlYt9qoSrLp0xThzQ.jpg" alt="Liberace: The World's Greatest Showman Poster">
+            <div class="card-body">
+              <p class="card-title">Liberace: The World's Greatest Showman</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/1150126">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//peRJajgLPgGWAGnAjMgoZzFod9.jpg" alt="Mad Max Exposed Poster">
+            <div class="card-body">
+              <p class="card-title">Mad Max Exposed</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/1152700">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//I6pCaJVZtsu12psjSiTY3xugMX.jpg" alt="Love of the Soviet Union Poster">
+            <div class="card-body">
+              <p class="card-title">Love of the Soviet Union</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/1164391">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//mdvdf5VIOgDmF8mnJW1lKah10kt.jpg" alt="A Day, 365 Hours Poster">
+            <div class="card-body">
+              <p class="card-title">A Day, 365 Hours</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/1263421">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//etbHJxil0wHvYOCmibzFLsMcl2C.jpg" alt="Baki Hanma VS Kengan Ashura Poster">
+            <div class="card-body">
+              <p class="card-title">Baki Hanma VS Kengan Ashura</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/1284745">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//bVkMZZ8cQxYP32K6wolnr77LEJl.jpg" alt="Borderlands Poster">
+            <div class="card-body">
+              <p class="card-title">Borderlands</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      <div class="col-5 col-lg-2 card m-2">
+        <a href="/movie/1337143">
+          <div class="car">
+            <img class="card-img-top" src="https://image.tmdb.org/t/p/w200//2q42lmkSbh9NjfrUoY1eO9G11ZR.jpg" alt="Thor Poster">
+            <div class="card-body">
+              <p class="card-title">Thor</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+  </div>
+</div>
+
+
+<img src="https://image.tmdb.org/t/p/w200/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="">
+
+<img src="https://image.tmdb.org/t/p/w200/yx1pc9vS1EtQyUu2ocxeds1GM52.jpg">
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

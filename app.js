@@ -16,7 +16,7 @@ app.set('view engine', 'ejs');
 
 // ... other requires and variable declarations
 
-const itemsPerPage = 24; // Number of items per page
+const itemsPerPage = 60; // Number of items per page
 
 app.get('/', async function (req, res)  {
   const url = 'http://localhost:5000/multi';
@@ -34,15 +34,14 @@ app.get('/', async function (req, res)  {
   const filteredData = combinedData.filter(item => 
     searchTerm.toLowerCase() === '' || // If no search, show all data
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+ );
 
   const paginatedData = filteredData.slice(startIndex, endIndex);
-  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+ // const totalPages = Math.ceil(filteredData.length / itemsPerPage);
 
   res.render('home', { 
     combinedData: paginatedData, 
     currentPage: currentPage, 
-    totalPages: totalPages,
     searchTerm: searchTerm // Pass the search term to the template
   });
 });
@@ -78,22 +77,34 @@ app.get('/movie', async function(req,res){
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 })
+async function getMovieGenres(genreIds, apiKey) {
+  try {
+    const response = await fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`);
+    if (!response.ok) {
+      throw new Error(`TMDB API request failed with status ${response.status}`);
+    }
+    const data = await response.json();
+    const allGenres = data.genres;
+    return genreIds.map(id => allGenres.find(genre => genre.id === id)?.name || 'Unknown');
+  } catch (error) {
+    console.error('Error fetching genres:', error);
+    return [];
+  }
+}
+
 
 app.get('/movie/:movieId', async function(req, res) {
-  
-  const movieId = parseInt(req.params.movieId); // Parse the movieId
+  const apiKey = '330ae4bafef6ccb937dfb210a75f0fd8';
+  const movieId = parseInt(req.params.movieId);
+  const searchTerm = req.query.search || '';
   const url = 'http://localhost:5000/movie';
   const response = await fetch(url, {
     method: 'GET', 
   });
   const movieDatas = await response.json();
-
   const movie = movieDatas.find(movie => movieId === movie.id);
-  const searchTerm = req.query.search || '';
-  
- 
+ // const genreNames = await getMovieGenres(movie.genre_ids, apiKey);
   if (movie) {
-    // Pass the movie to the 'movieDetails' template 
     res.render('downloadPage', {movie:movie
     }); // Use movieDetails instead of downloadPage
   } else {
