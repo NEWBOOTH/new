@@ -61,14 +61,15 @@
         <img src="https://image.tmdb.org/t/p/w200/<%= series.background %>" alt="<%= series.title %> Poster" class="img-fluid" style="margin: 100px 0 0 50px;">
       <% } %>
     </div>
-      <p><%= series.first%></p>
+    
+      <p><%= series.release %></p>
       <% if (series.overview) { %>
         <h4 class="mb-3">Overview:</h4>
         <p><%= series.overview %></p>
       <% } %>
       <% if (series.trailer) { %>
         <h4 class="mb-3">Trailer</h4>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= series.trailer %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= series.trailer %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen <polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="33.3,41.4 33.3,17.75 56,29.6"></polygon>></iframe>
         <% } %>
     </div>
     
@@ -89,15 +90,17 @@
       <div class="tab-content" id="seasonTabContent">
         <% series.seasons.forEach((season, index) => { %>
           <div class="tab-pane fade <%= index === 0 ? 'show active' : '' %>" id="season-<%= index %>" role="tabpanel" aria-labelledby="season-tab-<%= index %>">
+           <hr>
             <% if (season.episodes && season.episodes.length > 0) { %>
-              <ul class="list-group">
+              <ul class="list-grup">
                 <% season.episodes.forEach((episode) => { %>
                   <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <a href="/res/series/<%= series.id %>/<%= season.season %>/<%= episode.episode %>">
+                    <a href="/res/series/<%= series.id %>/<%= season.season %>/<%= episode.episode %>?titles/<%= encodeURIComponent(episode.title) %>">
                       <%= episode.episode %>: <%= episode.title %>
                     </a>
                     <button class="btn btn-m" style="color: #fB422C;font-size:20px; font-family:serif">⇩</button>
                   </li>
+                  <hr>
                 <% }); %>
               </ul>
             <% } else { %>

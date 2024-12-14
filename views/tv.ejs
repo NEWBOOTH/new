@@ -2,23 +2,26 @@
     <h1>TV Shows</h1>
 
     
-    
+    <hr>
         <% series.forEach((serie, index) => { %>
-            <div class="container card mb-">
-                <a href="/series/<%= serie.id %>">
+            <div class="container car mb-">
+                <a href="/series/<%= serie.id %>?titles/<%= encodeURIComponent(serie.title) %>">
                 <div class="row mt-3">
                     <div class="col-lg-2 col-md-3 col-sm-4 car me-1">
                         <img src=" https://image.tmdb.org/t/p/w200/<%=serie.background %>">
                     </div>
                     <div class="car col-lg-8 col-md-6 col-sm-5 ms-4">
                         <h4 class="card-title mt-2"><%= serie.title %></h4>
-                        <em>Genre</em><br>
-                        <em>Rating</em>
-                        <p class="one">overview: <span class="str"><%= serie.overview %></span><br></p>
+                        <p><strong>Genre:</strong> <%= serie.genres ? serie.genres.map(genre => genre.name).join(', ') : 'N/A' %></p> 
+                        <p><strong>Rating:</strong> <%= serie.vote_average || 'N/A' %></p>
+                        <p>Overview: <span class="str"><%= serie.overview ? serie.overview.substring(0, 120) + "..." : "Overview not available" %></span></p>
+                        
+
                         <p class="p- mt-3"> <i></i> TV SHOW</p></div>
                     
                 </div>
                 </a>
+                <hr>
             </div>
         <% }); %>
    

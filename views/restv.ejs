@@ -4,10 +4,10 @@
   <% if (series.background) { %>
     <img src="https://image.tmdb.org/t/p/w200/<%= series.background %>" alt="<%= series.title %> Poster" class="img-fluid m-3">
   <% } %>
-  
+  <p><%= series.release %></p>
   <% if (episode) { %>
     <h1>S<%= season.season %> - Ep<%= episode.episode %>: <%= episode.title %></h1>
-     <p><p><%= episode.release %></p></p>
+     
     <p><h4>OVERVIEW</h4><%= episode.overview %></p>
   <% } else { %>
     <p>Select a season and episode to download.</p>

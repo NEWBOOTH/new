@@ -4,21 +4,22 @@
 
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-2 col-sm-3 mb-4">
-      <div class="card">
+    <div class="col-md-5 col-lg-4 col-sm-5 mb-4">
+      <div class="cad">
+        <h4 class="card-title"><%= movie.title %></h4>
         <div class="card-body">
           <% if (movie.background) { %>
-            <img src="https://image.tmdb.org/t/p/w200/<%= movie.background %>" class="card-img-top" alt="<%= movie.title %> Poster">
+            <img src="https://image.tmdb.org/t/p/w200/<%= movie.background %>" class="cad-img-top" alt="<%= movie.title %> Poster">
           <% } else { %>
             <p>No poster available.</p> 
           <% } %>
-          <h4 class="card-title"><%= movie.title %></h4>
-          <p class="card-text">Release Date: <%= movie.releaseDate %></p>
-          <p class="card-text">Genre: <%= movie.genre %></p>
+          
+          <p class="card-text">Release Date: <%= movie.release %></p>
+          <p class="card-text">Genre: <%= movie.genre_ids %></p>
         </div>
       </div>
     </div>
-    <div class="col-sm-5 col-md-5 ">
+    <div class="col-sm-6 col-md-5 ">
       <div class="card mb-3">
         <div class="card-body">
           <h4>Overview</h4>
@@ -42,7 +43,16 @@
       <div class="car -3">
         <h4>Trailer</h4>
         <% if (movie.trailer) { %>
-          <iframe width="400" height="315" src="https://www.youtube.com/embed/<%= movie.trailer %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="col-sm-6 col-md-5 col-lg-6 m-5"></iframe>
+          <div class="d-flex justify-content-center m-5">
+            <svg width="500" height="90" viewBox="10 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.5 12H5.5V10H18.5V12Z" fill="#000"/>
+              <path d="M18.5 14H5.5V16H18.5V14Z" fill="#000"/>
+            </svg>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= movie.trailer %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>   
+          
           <% } %>
          
       </div>

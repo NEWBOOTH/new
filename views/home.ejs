@@ -8,16 +8,20 @@
 
 
   
-  <div class="containe mt-5 mb-5 ps-5 ms-auto">
-    <h1>Media List</h1>
+  <div class="ontainer mt- mb-5 ps-5 ms-auto">
     <div class="row">
       <% combinedData.forEach((item) => { %>
-        <div class="col-5 col-lg-2 card m-2">
-          <a href="<%= item.mediaType === 'movie' ? `/movie/${item.id}` : `/series/${item.id}` %>" >
+        <div class="col-sm-3 col-5 col-md-3 col-lg-1 cad m-2">
+          <a href="/<%= item.mediaType %>/<%= item.id %>?title<%= encodeURIComponent(item.title) %>" class="lu-one">
+
             <div class="car">
-              <img class="card-img-top" src="https://image.tmdb.org/t/p/w200/<%= item.background %>" alt="<%= item.title %> Poster">
+            
+                <img class="card-img-top" src="https://image.tmdb.org/t/p/w200/<%= item.background %>" alt="<%= item.title %> Poster">
+              
+              <div class="lu-flags">
+                <i class="fi fi-us"></i>      </div>
               <div class="card-body">
-                <p class="card-title"><%= item.title %></p>
+                <h3 class="card-titl"><%= item.title %></h3>
               </div>
             </div>
           </a>
@@ -36,7 +40,7 @@
     <% if (currentPage > 1) { %>
       <div class="page-item justify-content-start"><a class="page-link" href="/?page=<%= currentPage - 1 %>">&leftarrow;Previous</a></div>
     <% } %>
-    <% if (currentPage < 1000) { %>
+    <% if (currentPage < combinedData.length) { %>
       <div class="page-item ms-auto"><a class="page-link" href="/?page=<%= currentPage + 1 %>">NEXT&rightarrow;</a></div>
     <% } %>
   </ul>

@@ -16,7 +16,7 @@ app.set('view engine', 'ejs');
 
 // ... other requires and variable declarations
 
-const itemsPerPage = 60; // Number of items per page
+const itemsPerPage = 700; // Number of items per page
 
 app.get('/', async function (req, res)  {
   const url = 'http://localhost:5000/multi';
@@ -28,13 +28,13 @@ app.get('/', async function (req, res)  {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const searchTerm = req.query.search || ''; // Get search term from query parameter (or empty string if none)
-
-
-  // Filter the data based on the search term (case-insensitive)
-  const filteredData = combinedData.filter(item => 
-    searchTerm.toLowerCase() === '' || // If no search, show all data
-    item.title.toLowerCase().includes(searchTerm.toLowerCase())
- );
+  const filteredData = combinedData.filter(item =>
+    searchTerm.toLowerCase() === '' ||
+    item.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    item.overview?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    (item.genres?.some(genre => genre.name?.toLowerCase().includes(searchTerm.toLowerCase())) )
+  );
+  
 
   const paginatedData = filteredData.slice(startIndex, endIndex);
  // const totalPages = Math.ceil(filteredData.length / itemsPerPage);
@@ -128,7 +128,7 @@ app.get('/series/:seriesId', async function(req, res) {
   const url = 'http://localhost:5000/series'
   const response = await fetch(url, {
     method: 'GET',
-  });
+  })
   const series = await response.json()
 
   const Rurl = 'http://localhost:5000/recomended';
