@@ -1,2 +1,15 @@
 <%-include ('partials/header') -%> 
 <h1>K-MOVIES</h1>
+
+<div class="container">
+    <div class="row">
+    <% koreaMovie.forEach(korea => { %>
+        <div class="col-5 col-lg-2">
+            <div>
+                <img src="https://image.tmdb.org/t/p/w200/<%= korea.poster_path %>" alt="">
+            </div>
+            <div><h3><%= korea.title %></h3></div>
+        </div>
+  <%  }) %>
+</div>
+</div>

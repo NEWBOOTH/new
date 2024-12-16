@@ -9,14 +9,7 @@ app.use(express.static('public'))
 app.set('view engine', 'ejs');
 
 
-
-// ... (other code)
-
-// ... other code ...
-
-// ... other requires and variable declarations
-
-const itemsPerPage = 700; // Number of items per page
+const itemsPerPage = 800; // Number of items per page
 
 app.get('/', async function (req, res)  {
   const url = 'http://localhost:5000/multi';
@@ -109,6 +102,20 @@ app.get('/movie/:movieId', async function(req, res) {
     }); // Use movieDetails instead of downloadPage
   } else {
     res.status(404).send('Movie not found.');
+  }
+});
+
+
+
+
+app.get('/tor/:torId', async (req, res) => {
+  const movieId = req.params.id;
+  try {
+    const movie = await getMovieDetails(movieId); // Function to fetch movie details
+    res.render('resTor', { movie });
+  } catch (error) {
+    console.error('Error fetching movie details:', error);
+    res.status(500).send('Error fetching movie details');
   }
 });
 
@@ -216,8 +223,13 @@ app.get('/k-series', function(req,res){
   res.render('k-series')
 });
 
-app.get('/k-movie', function(req,res){
-  res.render('k-movie')
+app.get('/k-movie', async function(req,res){
+  const url = 'http://localhost:5000/koreaMovies';
+  const response = await fetch(url, {
+    method: 'GET',
+  });
+  const koreaMovie = await response.json();
+  res.render('k-movie', {koreaMovie:koreaMovie})
 })
 
 
